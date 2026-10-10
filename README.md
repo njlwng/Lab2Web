@@ -188,6 +188,6 @@ Dengan elemen ini, struktur halaman jadi lebih jelas dan mudah dipahami, baik ol
 
 ## Repository GitHub
 
-![Repository GitHub](screenshots/10-github.png)
+![Repository GitHub](screenshots/10-GitHub.png)
 
 URL repository: https://github.com/njlwng/Lab2Web
