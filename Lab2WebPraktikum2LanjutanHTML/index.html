@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Lanjutan</title>
+</head>
+<body>
+
+    <h1>Praktikum 2: HTML Lanjutan</h1>
+    <p>Nama: Najla Wening Khairunnisa | NIM: 312510225</p>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- LANGKAH 1: Membuat Tabel Data Mahasiswa                   -->
+    <!-- ========================================================= -->
+    <h1>Data Mahasiswa</h1>
+    <table border="1">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Program Studi</th>
+        </tr>
+        <tr>
+            <td>312510225</td>
+            <td>Najla</td>
+            <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+            <td>312510255</td>
+            <td>Nabila</td>
+            <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+            <td>312510190</td>
+            <td>Caya</td>
+            <td>Teknik Informatika</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- LANGKAH 2: Mengembangkan Tabel dengan thead, tbody, tfoot -->
+    <!-- Eksperimen: ubah data, tambah baris, gunakan colspan      -->
+    <!-- ========================================================= -->
+    <table border="1">
+        <caption>Nilai Praktikum</caption>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Najla</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nabila</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <tr><td>3</td><td>Caya</td><td>80</td></tr>
+                <td colspan="2">Rata-rata</td>
+                <td>85</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- LANGKAH 3, 4, 5: Form Registrasi Mahasiswa                -->
+    <!-- Langkah 3 = nama, email, password, tanggal lahir          -->
+    <!-- Langkah 4 = radio button & checkbox                       -->
+    <!-- Langkah 5 = select & textarea                             -->
+    <!-- Semuanya berada dalam SATU form yang sama                 -->
+    <!-- ========================================================= -->
+    <h1>Form Registrasi Mahasiswa</h1>
+    <form>
+
+        <!-- ----- Langkah 3 ----- -->
+        <label for="nama">Nama Lengkap</label><br>
+        <input type="text" id="nama" name="nama"><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="tanggal">Tanggal Lahir</label><br>
+        <input type="date" id="tanggal" name="tanggal"><br><br>
+
+        <!-- ----- Langkah 4 ----- -->
+        <h2>Jenis Kelamin</h2>
+        <input type="radio" id="laki" name="jk" value="L">
+        <label for="laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="jk" value="P">
+        <label for="perempuan">Perempuan</label>
+
+        <h2>Keahlian</h2>
+        <input type="checkbox" id="html" name="skill" value="HTML">
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="skill" value="CSS">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="js" name="skill" value="JavaScript">
+        <label for="js">JavaScript</label>
+        <br><br>
+
+        <!-- ----- Langkah 5 ----- -->
+        <label for="prodi">Program Studi</label>
+        <select id="prodi" name="prodi">
+            <option value="">-- Pilih Prodi --</option>
+            <option value="ti">Teknik Informatika</option>
+            <option value="si">Sistem Informasi</option>
+        </select>
+        <br><br>
+
+        <label for="alamat">Alamat</label><br>
+        <textarea id="alamat" name="alamat" rows="5" cols="40"></textarea>
+        <br><br>
+
+        <!-- Tombol (dari langkah 3) -->
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- LANGKAH 6: Validasi Form Dasar                            -->
+    <!-- Coba tekan Kirim tanpa mengisi data, amati pesan browser  -->
+    <!-- ========================================================= -->
+    <h1>Validasi Form</h1>
+    <form>
+        <label for="nama6">Nama</label>
+        <input type="text" id="nama6" name="nama" required minlength="3">
+
+        <label for="email6">Email</label>
+        <input type="email" id="email6" name="email" required>
+
+        <label for="umur6">Umur</label>
+        <input type="number" id="umur6" name="umur" min="17" max="60" required>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- LANGKAH 7: Membuat Halaman Semantic HTML                  -->
+    <!-- ========================================================= -->
+    <h1>Semantic HTML</h1>
+    <header>
+        <h1>Portal Mahasiswa</h1>
+    </header>
+
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Profil</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Informasi Akademik</h2>
+            <article>
+                <h3>Praktikum HTML Lanjutan</h3>
+                <p>
+                    Mahasiswa mempelajari tabel, form, semantic HTML,
+                    multimedia, dan validasi.
+                </p>
+            </article>
+        </section>
+
+        <aside>Informasi tambahan mahasiswa.</aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Teknik Informatika</p>
+    </footer>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- LANGKAH 8: Menambahkan Multimedia                         -->
+    <!-- ========================================================= -->
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="media/audio.mp3" type="audio/mpeg">
+        Browser tidak mendukung audio.
+    </audio>
+
+    <h2>Video</h2>
+    <video controls width="480">
+        <source src="media/video.mp4" type="video/mp4">
+        Browser tidak mendukung video.
+    </video>
+
+</body>
+</html>
